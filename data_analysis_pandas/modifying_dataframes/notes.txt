@@ -36,3 +36,17 @@ Applying a Lambda to a Row ---------------------------------------------------->
 
     > To access particular values of the row, we use the syntax: row.column_name
     or row['column_name'].
+
+
+Renaming Columns ------------------------------------------------------------->
+    > You can change all of the column names at once by setting the .columns 
+    property to a different list. Be careful not to get the ordering wrong. 
+
+    > You can also rename individual columns by using the .rename method. 
+    > Pass a dictionary to the columns keyword argument:
+        {'old_column_name1': 'new_column_name1', 
+        'old_column_name2': 'new_column_name2'}
+
+    > Using rename with only the columns keyword will create a new DataFrame, 
+    leaving yout original DataFrame unchanged. inplace=True lets us edit the 
+    original DataFrame. 
