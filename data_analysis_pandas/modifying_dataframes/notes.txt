@@ -1,0 +1,38 @@
+II. MODIFYING DATAFRAMES 
+Adding A Column -------------------------------------------------------------->
+    > One way that we can add a new column is by giving a list of the same
+    length as the existing DataFrame. 
+
+    > We can add a new column that is the same for all rows in the DataFrame. 
+    We would use the syntax: df["in stock"] = True
+
+    > We can add a new column by performing a funnction on the existing columns
+
+
+Performing Column Operations ------------------------------------------------->
+Important Keywords in this Section (for me): .apply()
+    > We can use the apply function to apply a function to every value in a 
+    particular column: df["Name"] = df.Name.apply(str.upper)
+
+
+Reviewing Lambda Function ---------------------------------------------------->
+    > A lambda function is a way of defininf a function in a single line 
+    of code, usually assigned to a variable:
+        myLambda = lambda x: (x * 2) + 3 
+
+    > using lambda functions with an if statement would look like:
+    syntax: lambda x: [OUTCOME IF TRUE] if [CONDITIONAL] else [OUTCOME IF FALSE]
+        Ex) myfunction = lambda x: 40 + (x - 40) * 1.50 if x > 40 else x
+        Ex) mylambda = lambda x: "Welcome to BattleCity!" if x >= 13 else "You must be over 13"
+
+Applying a Lambda to a Row ---------------------------------------------------->
+    > We often use lambda functions to perform complex operations on columns.
+
+
+Applying a Lambda to a Row ---------------------------------------------------->
+    > We can also operate on multiple columns at once. If we use apply without 
+    specifying a single column and add the argument axis=1, the input to our 
+    lambda function will be an entire row. 
+
+    > To access particular values of the row, we use the syntax: row.column_name
+    or row['column_name'].
