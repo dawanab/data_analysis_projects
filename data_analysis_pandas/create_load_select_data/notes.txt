@@ -70,7 +70,7 @@ Selecting Multiple Columns --------------------------------------------------->
     this command wont work: new_df = orders[['last_name', 'email']]
 
 
-Selecting Multiple Rows ------------------------------------------------------>
+Selecting Rows ------------------------------------------------------>
     > DataFrames are zero-indexed. When we select a single row, the result is a
     Series. The notation is as such: orders.iloc[2]
 
@@ -91,5 +91,26 @@ Select Rows with Logic ------------------------------------------------------->
 
         Ex) df[age == 30]
         Ex) df[df.age > 30]
+
+    > You can combine multiple logical statements, as long as each one is 
+    in parentheses.
+        Ex) df[(df.age < 30 ) | (df.name == "Martha Jones")]
+
+    > You can use the isin command to check that df.name is one of a list 
+    of values. 
+        Ex) df[df.name.isin(["Martha Jones", "Rose Tyler", "Amy Pond"])]
+
+
+Setting Indicies -------------------------------------------------------------->
+    > When we select a subset of a DataFrame using logiv, we end up with non-
+    consecutive indices. We can fix this by using .reset_index(). If we run 
+    the command df.reset_index(drop=True), we get a new DataFrame without 
+    an extra column
+
+    > using .reset_index() will return a new DataFrame, but we usually want to 
+    modify our existing DataFrame. We can use inplace=True to do this.
+
+
+
 
     
