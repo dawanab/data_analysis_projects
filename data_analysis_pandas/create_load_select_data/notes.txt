@@ -1,0 +1,58 @@
+I. CREATING, LOADING, AND SELECTING DATA WITH PANDAS
+Importing the Pandas Module ------------------------------------------------->
+    > Pandas is a Python module for working with tabular data 
+    (table with rows and columns).
+    > In order to access the Pandas module, we need to install the module and 
+    then import it into a Python file. (It's common to alias pandas as pd).
+
+
+Create a DataFrame ---------------------------------------------------------->
+    > A DataFrame is an object that stores data as rows and columns. Think 
+    of it as a SQL table or a spreadsheet. You can manually create one, or
+    have it populated with data from a CSV, or SQL query. 
+    > Each row in the data frame has an index that is a integer and a column 
+    that has a string for a name. DataFrames can contain many different 
+    data types. 
+
+    > When adding data using lists, we would pass a list of lists, where 
+    each inner list represents a row of data. Use the keyword arguement 
+    columns to pass a list of column names. 
+
+
+Comma Separated Variables (CSV) --------------------------------------------->
+    > One the of the most common formats for working with datasets that al-
+    ready exist is the CSV. It's a text-only spreadsheet format. You can 
+    find them in: online datasets like data.gov, export from exceel or 
+    google sheets, or an export from SQL.
+
+    > The first row of a CSV contains column headings. All subsequent rows 
+    contain values. Each, being separated by a comma:
+        name,cake_flavor,frosting_flavor,topping
+        Chocolate Cake,chocolate,chocolate,chocolate shavings
+        Birthday Cake,vanilla,vanilla,rainbow sprinkles
+        Carrot Cake,carrot,cream cheese,almonds
+
+
+Loading and Saving CSVs ----------------------------------------------------->
+Important keywords in this section (for me): .read_csv(), .to_csv()
+    > When you have data in a CSV, you can load it into a DataFrame in 
+    Pandas using .read_csv
+
+    > We can also save data to a CSV, using .to_csv()
+
+
+Inspect A DataFrame --------------------------------------------------------->
+Important keywords in this section (for me): .head(), df.info(), print(df)
+    > When we load a DataFrame from a CSV, we want to know what it looks
+    like. If it is a smaller df, you can display it with print(df).
+    It it's a larger df, it may be helpful to inspect a few items without
+    having to look at the entire DataFrame.
+
+    > The method .head() gives the first 5 rows of a DataFrame. If you want 
+    to see more rows, pass in the positional argument.
+
+    > The method df.info() gives some statistics for each column. 
+
+
+Select Columns --------------------------------------------------------------->
+    > 
