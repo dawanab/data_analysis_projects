@@ -55,4 +55,41 @@ Important keywords in this section (for me): .head(), df.info(), print(df)
 
 
 Select Columns --------------------------------------------------------------->
-    > 
+    > There are two possible syntaxes for selecting all values from a column:
+        1. Select the column as if you were selecting a value from a dictionary
+        using a key:  customers["age"] 
+        2. If the name of a column follows all of the rules for a variable name,
+        then you can select it using the notation: df.MySecondColumm
+
+    > When we select a single column, the result is called a Series. 
+
+
+Selecting Multiple Columns --------------------------------------------------->
+    > To select two or more columns from a DataFrame, use a list of the 
+    column names. Make sure to use a double set of brackets ( [[]] ) or 
+    this command wont work: new_df = orders[['last_name', 'email']]
+
+
+Selecting Multiple Rows ------------------------------------------------------>
+    > DataFrames are zero-indexed. When we select a single row, the result is a
+    Series. The notation is as such: orders.iloc[2]
+
+
+Selecting Multiple Rows ------------------------------------------------------>
+    > We can use slicing to select certain rows: 
+    * orders.iloc[3:7] - selects all rows starting at the third row and up to but not including the seventh row.
+
+    * orders.iloc[:4] - selects all rows up to, but not including the fourth row
+
+    * orders.iloc[-3:] - selects the rows starting at the thrid to last row and 
+    up to but not including the final row
+
+    
+Select Rows with Logic ------------------------------------------------------->
+    > You can select a subset of a DataFrame by using logical statements:
+        Ex) df[df.MyColumnName == desired_column_value]
+
+        Ex) df[age == 30]
+        Ex) df[df.age > 30]
+
+    
