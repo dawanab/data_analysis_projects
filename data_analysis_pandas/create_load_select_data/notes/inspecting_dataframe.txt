@@ -1,0 +1,14 @@
+🟪 Inspecting A Dataframe:
+    > When you get a new Dataframe, the first thing you'd want to do is to 
+    explore it and see its data. There are several useful methods to help:
+        >>> .head(): returns the first few rows of the DF 
+        >>> .info(): shows information on each of the columns
+        >>> .shape(): returns the number of rows and columns of the DF 
+        >>> .describe(): calculates a few summary statistics for each column
+
+🟪 Parts of a Dataframe:
+    > Dataframe objects consist of three components, stored as attributes:
+        >>> .values: a 2D NumPy array of values 
+        >>> .columns: an index of columns: the column names 
+        >>> .index: an index for the row: either row numbers or names 
+
