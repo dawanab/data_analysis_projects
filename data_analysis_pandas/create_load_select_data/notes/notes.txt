@@ -22,7 +22,7 @@ I. CREATING, LOADING, AND SELECTING DATA WITH PANDAS
 🟣 Comma Separated Variables (CSV) --------------------------------------------->
     > One the of the most common formats for working with datasets that al-
     ready exist is the CSV. It's a text-only spreadsheet format. You can 
-    find them in: online datasets like data.gov, export from exceel or 
+    find them in: online datasets like data.gov, export from excel or 
     google sheets, or an export from SQL.
 
     > The first row of a CSV contains column headings. All subsequent rows 
@@ -59,7 +59,7 @@ Important keywords in this section (for me): .head(), df.info(), print(df)
         1. Select the column as if you were selecting a value from a dictionary
         using a key:  customers["age"] 
         2. If the name of a column follows all of the rules for a variable name,
-        then you can select it using the notation: df.MySecondColumm
+        then you can select it using dot notation: df.MySecondColumm
 
     > When we select a single column, the result is called a Series. 
 
