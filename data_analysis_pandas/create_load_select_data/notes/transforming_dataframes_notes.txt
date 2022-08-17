@@ -1,3 +1,4 @@
+INTRODUCING DATAFRAMES --------------------------------------------------->
 🟪 Inspecting A Dataframe:
     > When you get a new Dataframe, the first thing you'd want to do is to 
     explore it and see its data. There are several useful methods to help:
@@ -12,3 +13,14 @@
         >>> .columns: an index of columns: the column names 
         >>> .index: an index for the row: either row numbers or names 
 
+
+SORTING AND SUBSETTING ------------------------------------------------->
+🟪 To select multiple columns, you need two pairs of square brackets. The outer 
+square brackets are responsible for subsetting the DF, and the inner square 
+brackets are creating a list of column names as a variable and then use that 
+list to perform the same subsetting. 
+
+🟪 Sorting Rows:
+    > You can sort the rows by passing a column name to .sort_values().
+    > You can sort on multiple columns in this way by passing a list of 
+    column names. 

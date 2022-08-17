@@ -1,12 +1,12 @@
 I. CREATING, LOADING, AND SELECTING DATA WITH PANDAS
-Importing the Pandas Module ------------------------------------------------->
+🟣 Importing the Pandas Module ------------------------------------------------->
     > Pandas is a Python module for working with tabular data 
     (table with rows and columns).
     > In order to access the Pandas module, we need to install the module and 
     then import it into a Python file. (It's common to alias pandas as pd).
 
 
-Create a DataFrame ---------------------------------------------------------->
+🟣 Create a DataFrame ---------------------------------------------------------->
     > A DataFrame is an object that stores data as rows and columns. Think 
     of it as a SQL table or a spreadsheet. You can manually create one, or
     have it populated with data from a CSV, or SQL query. 
@@ -19,7 +19,7 @@ Create a DataFrame ---------------------------------------------------------->
     columns to pass a list of column names. 
 
 
-Comma Separated Variables (CSV) --------------------------------------------->
+🟣 Comma Separated Variables (CSV) --------------------------------------------->
     > One the of the most common formats for working with datasets that al-
     ready exist is the CSV. It's a text-only spreadsheet format. You can 
     find them in: online datasets like data.gov, export from exceel or 
@@ -33,7 +33,7 @@ Comma Separated Variables (CSV) --------------------------------------------->
         Carrot Cake,carrot,cream cheese,almonds
 
 
-Loading and Saving CSVs ----------------------------------------------------->
+🟣 Loading and Saving CSVs ----------------------------------------------------->
 Important keywords in this section (for me): .read_csv(), .to_csv()
     > When you have data in a CSV, you can load it into a DataFrame in 
     Pandas using .read_csv
@@ -41,7 +41,7 @@ Important keywords in this section (for me): .read_csv(), .to_csv()
     > We can also save data to a CSV, using .to_csv()
 
 
-Inspect A DataFrame --------------------------------------------------------->
+🟣 Inspect A DataFrame --------------------------------------------------------->
 Important keywords in this section (for me): .head(), df.info(), print(df)
     > When we load a DataFrame from a CSV, we want to know what it looks
     like. If it is a smaller df, you can display it with print(df).
@@ -54,7 +54,7 @@ Important keywords in this section (for me): .head(), df.info(), print(df)
     > The method df.info() gives some statistics for each column. 
 
 
-Select Columns --------------------------------------------------------------->
+🟣 Select Columns --------------------------------------------------------------->
     > There are two possible syntaxes for selecting all values from a column:
         1. Select the column as if you were selecting a value from a dictionary
         using a key:  customers["age"] 
@@ -64,18 +64,18 @@ Select Columns --------------------------------------------------------------->
     > When we select a single column, the result is called a Series. 
 
 
-Selecting Multiple Columns --------------------------------------------------->
+🟣 Selecting Multiple Columns --------------------------------------------------->
     > To select two or more columns from a DataFrame, use a list of the 
     column names. Make sure to use a double set of brackets ( [[]] ) or 
     this command wont work: new_df = orders[['last_name', 'email']]
 
 
-Selecting Rows ------------------------------------------------------>
+🟣 Selecting Rows ------------------------------------------------------>
     > DataFrames are zero-indexed. When we select a single row, the result is a
     Series. The notation is as such: orders.iloc[2]
 
 
-Selecting Multiple Rows ------------------------------------------------------>
+🟣 Selecting Multiple Rows ------------------------------------------------------>
     > We can use slicing to select certain rows: 
     * orders.iloc[3:7] - selects all rows starting at the third row and up to but not including the seventh row.
 
@@ -85,7 +85,7 @@ Selecting Multiple Rows ------------------------------------------------------>
     up to but not including the final row
 
     
-Select Rows with Logic ------------------------------------------------------->
+🟣 Select Rows with Logic ------------------------------------------------------->
     > You can select a subset of a DataFrame by using logical statements:
         Ex) df[df.MyColumnName == desired_column_value]
 
@@ -101,7 +101,7 @@ Select Rows with Logic ------------------------------------------------------->
         Ex) df[df.name.isin(["Martha Jones", "Rose Tyler", "Amy Pond"])]
 
 
-Setting Indicies -------------------------------------------------------------->
+🟣 Setting Indicies -------------------------------------------------------------->
     > When we select a subset of a DataFrame using logiv, we end up with non-
     consecutive indices. We can fix this by using .reset_index(). If we run 
     the command df.reset_index(drop=True), we get a new DataFrame without 
