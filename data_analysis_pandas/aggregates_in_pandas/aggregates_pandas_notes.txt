@@ -1,4 +1,44 @@
 III. AGGREGATES IN PANDAS
 
-🟪 Introduction -------------------------------------------------------->
-    > 
+🟪 Introduction ------------------------------------------------------------->
+    > An aggregate statistic is a way of creating a single number that 
+    describes a group of numbers. 
+        >>> Common aggregate statistics include mean, median, and standard 
+        deviation 
+
+
+🟪  Calculating Column Statistics -------------------------------------------->
+    > Aggregate functions summarize many data points (i.e column of a DF) into 
+    a smaller set of values. 
+
+    > The general syntax for these types of calculations is: 
+    df.column_name.command()
+
+    > Some common commands are:
+    COMMAND         DESCRIPTION
+    mean            Average of all values in a column 
+    std             Standard deviation 
+    median          Median 
+    max             Maximum value in a column 
+    min             Minimum value in a column 
+    count           Number of values in column 
+    nunique         Number of unique values in column 
+    unique          List of unique values in column 
+
+
+🟪 Calculating Aggregate Functions I ---------------------------------------->
+    > When we have a large amount of data, we often want to calculate aggregate 
+    statistivs over certain subsets of the data. 
+
+    > The general syntax for these kinds of aggregates is:
+    df.groupby("column_name).column_to_work_on.measurement()
+        >>> column_name is the column that we want to group by
+        >>> column_to_work_on is the column that we want to perform a measurement on 
+        >>> measurement is the measurement function we want to apply 
+
+    > After using groupby, we often will need to clean the resulting data. 
+    We can do this by using the .reset_index()
+
+    
+
+
